@@ -1,0 +1,16 @@
+[package]
+name = "pips"
+version = "0.1.0"
+authors = ["Michael Smythe <michael.smythe@outlook.com>"]
+edition = "2018"
+
+[dependencies]
+clap = "2.33.0"
+pnet = "0.22.0"
+reqwest = "0.9.15"
+
+[profile.release]
+opt-level = 'z'
+lto = true
+codegen-units = 1
+panic = 'abort'
